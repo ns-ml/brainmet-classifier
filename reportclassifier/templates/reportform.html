@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MRI Report Classification - Brain Metastases</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+
+<h2>Please enter the body of the MRI report:</h2>
+
+    {% from "_formhelpers.html" import render_field %}
+    
+<form method="post" action="/results">
+    <dl>
+    {{ render_field(form.mrireport, cols='30', rows='10')}}
+    </dl>
+    <div>
+    <input type="submit" value="Submit Report" name="submit_btn">
+    </div>
+    </form>  
+</body>
+</html>
