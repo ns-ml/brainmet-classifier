@@ -4,7 +4,7 @@ import pickle
 import sqlite3
 import os
 import numpy as np
-from vectorizer import vect
+#from web
 
 app = Flask(__name__)
 
