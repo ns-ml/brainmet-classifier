@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MRI Report Classification - Brain Metastases</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<h3>The original MRI report:</h3>
+	<div>{{ original_content }}</div>
+
+	<h3>The processed MRI report:</h3>
+	<div>{{ clean_content }}</div>
+
+	<h3>Prediction:</h3>
+	<div>This report has <strong>{{ prediction }}</strong> metastases (probability: {{ probability }}%).</div>
+
+<div id="button">
+<form action="/">
+	<input type="submit" value="Submit another report">
+</form>
+</div>
+
+</body>
+</html>
